@@ -20,6 +20,6 @@ RUN chmod -R 755 /app
 EXPOSE 3000
 
 # Default command
-CMD ["npm", "test", "&&", "npm", "start"]
+CMD npm test && npm start
 
 
