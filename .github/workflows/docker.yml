@@ -23,7 +23,7 @@ jobs:
       - name: 🏗️ Build Docker image
         run: |
           docker --version
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/hello-ci-cd:latest .
+          docker build -t "${{ secrets.DOCKER_USERNAME }}/hello-ci-cd:latest" .
 
       - name: 🚀 Push to Docker Hub
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/hello-ci-cd:latest
+        run: docker push "${{ secrets.DOCKER_USERNAME }}/hello-ci-cd:latest"
