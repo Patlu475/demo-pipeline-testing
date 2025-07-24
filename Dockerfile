@@ -13,6 +13,9 @@ RUN npm ci
 # Copy rest of the code
 COPY . .
 
+# Fix permissions for the entire app directory
+RUN chmod -R 755 /app
+
 # Expose port (not needed here, but good practice for real apps)
 EXPOSE 3000
 
